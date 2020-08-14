@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addText(){
+            var tagInputNote = document.getElementById("inputNote");
+            var tagList = document.getElementById("tagList");
+            //console.log("Abestado");
+            console.log(tagInputNote.value);
+            
+            var tagLi = document.createElement("li");
+            tagLi.innerHTML = tagInputNote.value;
+            tagList.appendChild(tagLi);
+        }
+
+    </script>
+</head>
+<body>
+    
+<h1>APP Note</h1>
+<p> <input type="text" id="inputNote">
+    <input type="color" id="inputColor">
+    <button onclick="addText();">Salva</button>
+</p>
+<hr>
+<p id="tagList"></p>
+
+
+<pre>#page>div.logo+ul#navigation>li*5>a{item $}</pre>
+
+<div id="page">
+    <div class="logo"></div>
+    <ul id="navigation">
+        <li><a href="">item 1</a></li>
+        <li><a href="">item 2</a></li>
+        <li><a href="">item 3</a></li>
+        <li><a href="">item 4</a></li>
+        <li><a href="">item 5</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
+
+<!--
+
+Aplicação vanilla - HTML5, CSS3, JavaScript 6 (ECMAScript 6)
+
+-->
