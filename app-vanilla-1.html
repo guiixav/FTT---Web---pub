@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {font-family: Verdana, sans-serif;}
+
+
+    </style>
     <script>
         function addText(){
             var tagInputNote = document.getElementById("inputNote");
@@ -16,6 +21,14 @@
             tagList.appendChild(tagLi);
         }
 
+        function setSkullSize() {
+            var tagSlider = document.getElementById("skullSize");
+            var tagDiv =document.getElementById("skullIcon");
+            console.log(tagSlider.value);
+
+            tagDiv.style.fontSize = tagSlider.value + "px";
+        }
+
     </script>
 </head>
 <body>
@@ -25,6 +38,10 @@
     <input type="color" id="inputColor">
     <button onclick="addText();">Salva</button>
 </p>
+<input onchange="setSkullSize();" type="range" min="30" max="300" value="100" class="slider" id="skullSize">    
+    <div class="icon" id="skullIcon">☠</div>
+
+
 <hr>
 <p id="tagList"></p>
 
